@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useReducer } from 'react';
 
 const initialState = {
   counter: 0
 }
 
-function reducer(state, action) {
+function reducer(state, action) {   
   switch (action.type) {
     case 'increment':
       return{
@@ -15,7 +15,7 @@ function reducer(state, action) {
   }
 }
 function Counter() {
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const [state, dispatch] = useReducer(reducer, initialState); //useReducer hook takes 2 arg: Reducer function and inital state
   const [hidden, setHidden] = useState(false);
 
   useEffect(() => {
