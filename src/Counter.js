@@ -4,6 +4,7 @@ const initialState = {
   counter: 0
 }
 
+// The state variable is always equal to the previous state.
 function reducer(state, action) {   
   switch (action.type) {
     case 'increment':
